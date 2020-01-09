@@ -80,20 +80,20 @@ class	lg_mysql
 //	Trả về - số records - của - 1 Result Set
 	public	function	num_rows ( $rs )
 	{
-		return	mysql_num_rows( $rs );
+		return	mysqli_num_rows( $rs );
 	}
 //	Hàm này - dùng để - chuyển - các ký tự - đặc biệt - sang - thể Escape - chống - Hack - SQL Injection
 	public	function	inj_str	( $txt )
 	{
-		return	mysql_escape_string($txt);
+		return	mysqli_escape_string($txt);
 	}
 	public	function	escape ( $txt )
 	{
-		return	mysql_escape_string($txt);
+		return	mysqli_escape_string($txt);
 	}
 	public	function	error()
 	{
-		return mysql_error($this->conn);
+		return mysqli_error($this->conn);
 	}
 /* -----------------------------------------
         Các hàm áp dụng với 1 Tables        
